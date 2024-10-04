@@ -29,7 +29,7 @@ jobs:
           git push origin $NEW_TAG
 
       - name: Output New Tag
-        run: echo "New tag promoted: ${{ steps.promote.outputs.new_tag }}"
+        run: echo ${{ steps.promote.outputs.new_tag }}
 
   confirm-deploy:
     runs-on: ubuntu-latest
